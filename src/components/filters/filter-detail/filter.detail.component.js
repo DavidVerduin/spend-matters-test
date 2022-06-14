@@ -1,3 +1,5 @@
+import "./filter.detail.css";
+
 /** The detail of the filters (Ingredient, Category, Glass...) */
 export const FilterDetailComponent = ({selected, options, selectItem, label}) => {
   const inputList = options && options.length ? options.map(elem => {
@@ -9,9 +11,9 @@ export const FilterDetailComponent = ({selected, options, selectItem, label}) =>
   }) : 'No filters';
 
   return (
-    <div style={{width: "90%", padding:"1rem", maxHeight: "20rem", overflow: "hidden", border: "1px solid lightgrey", marginBottom: "1rem"}}>
+    <div className="filter-detail">
       <h3>{label}</h3>
-      <div style={{overflowY: "scroll"}}>
+      <div className="filter-detail__list">
         {inputList}
       </div>
     </div>

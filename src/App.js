@@ -1,12 +1,21 @@
 import './App.css';
-import { LayoutComponent } from './components/layout.component';
+import "./styles/scrollbar.css";
+import { LayoutComponent } from './components/layout/layout.component';
+import { ModalComponent } from './components/shared/modal/modal.component';
+import { EventManagerFactory } from './services/event.manager.factory';
 
 function App() {
   return (
-    <div className="App">
+    <div className="App" onClick={hideModal}>
       <LayoutComponent></LayoutComponent>
+      <ModalComponent></ModalComponent>
     </div>
   );
+}
+
+function hideModal() {
+  const eventService = EventManagerFactory.getEventManager("MODAL");
+  eventService.emit(null);
 }
 
 export default App;

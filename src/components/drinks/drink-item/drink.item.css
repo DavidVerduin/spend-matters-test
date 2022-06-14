@@ -1,0 +1,16 @@
+.drink-item {
+  display: flex;
+  cursor: pointer;
+}
+
+.drink-item .drink-item__side {
+  margin-left: 1rem;
+}
+
+.drink-item .drink-item__side h3{
+  margin-top: 0;
+}
+
+.drink-item .drink-item__info {
+  color: rgb(67,55,117);
+}

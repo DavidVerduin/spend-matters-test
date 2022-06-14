@@ -1,6 +1,7 @@
-import { useFilters } from "../../services/effects/filters.effect"
-import { IntersectionWrapperComponent } from "../shared/intersection.wrapper.component";
-import { DrinkItemComponent } from "./drink.item.component";
+import "./drink.list.css";
+import { useFilters } from "../../../services/effects/filters.effect"
+import { IntersectionWrapperComponent } from "../../shared/intersection-wrapper/intersection.wrapper.component";
+import { DrinkItemComponent } from "../drink-item/drink.item.component";
 
 /** Container for the drink list. Displays a list of DrinkItemComponent */
 export const DrinkListComponent = () => {
@@ -8,7 +9,7 @@ export const DrinkListComponent = () => {
   // Display a list of the DrinkItems, giving them the needed info
   // Manage the clicks to show an indicator of the selected drink, aswell as prompting a modal with the detail
 
-  /**@type {import("../../models/drink.dto").DrinkDTO[]} */
+  /**@type {import("../../../models/drink.dto").DrinkDTO[]} */
   const drinks = useFilters({}).drinks;
   console.log(drinks)
   const componentList = drinks && drinks.length ? drinks.map(drink => {
@@ -18,7 +19,7 @@ export const DrinkListComponent = () => {
   }) : 'No data';
 
   return (
-    <div>
+    <div className="drink-list">
       {componentList}
     </div>
   )

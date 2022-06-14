@@ -1,0 +1,36 @@
+
+.layout .layout__header {
+  height: 8vh; 
+  width: 100%; 
+  border-bottom: 1px solid grey; 
+  background-color: rgb(67,55,117);
+  color:rgb(226,226,226);
+}
+
+.layout .layout__filter-topbar {
+  height: 3vh; 
+  width: 100%; 
+  border-bottom: 1px solid grey; 
+  margin-bottom: 1rem; 
+  background-color: rgb(54,49,77); 
+  color:rgb(226,226,226);
+}
+
+.layout .layout__main-section {
+  display: flex;
+}
+
+.layout .layout__main-section .layout__main-section__filter-sidebar {
+  width: 20%;
+  height: 85vh;
+  margin-left: 2rem;
+  background-color: rgb(234,160,117);
+  border-radius: 4px;
+}
+
+.layout .layout__main-section .layout__main-section__drink-list {
+  width: 80%;
+  height: 85vh;
+  margin-left: 2rem;
+  overflow: hidden;
+}

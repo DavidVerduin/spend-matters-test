@@ -1,0 +1,23 @@
+.filter-detail {
+  width: 100%; 
+  padding:1rem; 
+  padding-top: 0; 
+  height: 15rem; 
+  overflow: hidden;
+}
+
+.filter-detail .filter-detail__list {
+  overflow-y: auto; 
+  height: 80%;
+}
+
+.filter-button {
+  width: 90%;
+  padding: 0.4rem;
+  margin-bottom: 2px;
+  cursor: pointer;
+  color: rgb(67, 55, 117);
+  background-color: rgb(219, 218, 225);
+  border: 1px solid rgb(129,125,153);
+  border-radius: 3px;
+}

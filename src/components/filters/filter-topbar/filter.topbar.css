@@ -1,0 +1,12 @@
+.filter-topbar {
+  display: flex;
+}
+
+.filter-topbar .filter-topbar__elem {
+  width: 30%;
+  font-size: large;
+}
+
+.filter-topbar .filter-topbar__first {
+  margin-left: 3rem;
+}

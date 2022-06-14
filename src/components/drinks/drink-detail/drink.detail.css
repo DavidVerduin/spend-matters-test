@@ -1,0 +1,14 @@
+.drink-detail {
+  margin: 2rem;
+}
+
+.drink-detail .drink-detail__img {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.drink-detail .drink-detail__items {
+  width: 100%;
+  text-align: center;
+}
