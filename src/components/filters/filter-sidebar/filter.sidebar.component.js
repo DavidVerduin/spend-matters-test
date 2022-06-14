@@ -22,24 +22,33 @@ export const FilterSidebarComponent = () => {
   const [glassSelected, setGlassSelected] = useState();
   
   const selectIngredients = elem => {
-    setCategorySelected(null);
-    setGlassSelected(null);
-    setIngredientSelected(elem);
-    eventService.emit({'ingredient': elem});
+    if(ingredientSelected !== elem) {
+      setIngredientSelected(elem);
+      eventService.emit({'ingredient': elem});
+    } else {
+      setIngredientSelected(null);
+      eventService.emit({'ingredient': null});
+    }
   }
   
   const selectCategories = elem => {
-    setCategorySelected(elem);
-    setGlassSelected(null);
-    setIngredientSelected(null);
-    eventService.emit({'category': elem});
+    if(ingredientSelected !== elem) {
+      setCategorySelected(elem);
+      eventService.emit({'category': elem});
+    } else {
+      setCategorySelected(null);
+      eventService.emit({'category': null});
+    }
   }
   
   const selectGlasses = elem => {
-    setCategorySelected(null);
-    setGlassSelected(elem);
-    setIngredientSelected(null);
-    eventService.emit({'glass': elem});
+    if(ingredientSelected !== elem) {
+      setGlassSelected(elem);
+      eventService.emit({'glass': elem});
+    } else {
+      setGlassSelected(null);
+      eventService.emit({'glass': null});
+    }
   }
 
   return (

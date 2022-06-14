@@ -6,10 +6,7 @@ export const useModal = () => {
 
   useEffect(() => {
     const eventService = EventManagerFactory.getEventManager("MODAL");
-    eventService.subscribe("useModal", data => {
-      console.log('received', data);
-      setVisible(data);
-    });
+    eventService.subscribe("useModal", setVisible);
 
     return () => {
       eventService.unsuscribe("useModal");

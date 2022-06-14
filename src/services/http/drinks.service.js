@@ -5,7 +5,7 @@ class DrinkServiceClass {
   /**
    * Search cocktail by name
    * @param {string} name 
-   * @returns {Promise<{drinks: import("../../models/drink.dto").DrinkDTO[]}>}
+   * @returns {Promise<{drinks: import("../../models/drink.min.dto").DrinkMinDTO[]}>}
    */
   getDrinkByName(name) {
     return Service.get(`/search.php?s=${name}`);
@@ -14,7 +14,7 @@ class DrinkServiceClass {
   /**
    * List all cocktails by first letter
    * @param {string} firstLetter 
-   * @returns {Promise<{drinks: import("../../models/drink.dto").DrinkDTO[]}>}
+   * @returns {Promise<{drinks: import("../../models/drink.min.dto").DrinkMinDTO[]}>}
    */
   getDrinksByFirstLetter(firstLetter) {
     return Service.get(`/search.php?f=${firstLetter}`);
@@ -58,7 +58,7 @@ class DrinkServiceClass {
   /**
    * Search by ingredient
    * @param {string} id 
-   * @returns {Promise<{drinks: import("../../models/drink.dto").DrinkDTO[]}>}
+   * @returns {Promise<{drinks: import("../../models/drink.min.dto").DrinkMinDTO[]}>}
    */
   getDrinksByIngredient(name) {
     return Service.get(`/filter.php?i=${name}`);
@@ -67,7 +67,7 @@ class DrinkServiceClass {
   /**
    * Filter by alcoholic
    * @param {boolean} alcoholic 
-   * @returns {Promise<{drinks: import("../../models/drink.dto").DrinkDTO[]}>}
+   * @returns {Promise<{drinks: import("../../models/drink.min.dto").DrinkMinDTO[]}>}
    */
   getByAlcoholic(alcoholic) {
     return Service.get(`/filter.php?a=${alcoholic ? 'Alcoholic' : 'Non_Alcoholic'}`);
@@ -76,7 +76,7 @@ class DrinkServiceClass {
   /**
    * Filter by Category
    * @param {string} name 
-   * @returns {Promise<{drinks: import("../../models/drink.dto").DrinkDTO[]}>}
+   * @returns {Promise<{drinks: import("../../models/drink.min.dto").DrinkMinDTO[]}>}
    */
   getByCategory(name) {
     return Service.get(`/filter.php?c=${name}`);
@@ -85,7 +85,7 @@ class DrinkServiceClass {
   /**
    * Filter by Glass
    * @param {string} name 
-   * @returns {Promise<{drinks: import("../../models/drink.dto").DrinkDTO[]}>}
+   * @returns {Promise<{drinks: import("../../models/drink.min.dto").DrinkMinDTO[]}>}
    */
   getByGlass(name) {
     return Service.get(`/filter.php?g=${name}`);

@@ -4,7 +4,6 @@ import { useModal } from "../../../services/effects/modal.effect";
 export const ModalComponent = () => {
 
   const modalOptions = useModal();
-  console.log("Modal", modalOptions);
   if(modalOptions) {
 
     const {width, height} = getSize(modalOptions.size);

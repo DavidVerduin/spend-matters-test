@@ -14,6 +14,7 @@ export const EventManagerFactory = {
   }
 }
 
+/** Responsible of handling events through the app */
 class EventManager {
 
   name;
@@ -46,13 +47,13 @@ class EventManager {
   }
 
   /**
-   * @fires Every saved cb that exists
+   * @fires Every saved cb saved for this event, if it is a function
    * @param {any} data 
    */
   emit(data) {
     Object.values(this.cbDict).forEach(cb => {
       setTimeout(() => {
-        if(cb) cb(data);
+        if(cb && typeof cb === "function") cb(data);
         else console.error("cb is not present");
       });
 
